@@ -35,10 +35,10 @@
         private Triangle() { }
         public static Triangle CreateWith2Side(double sideA, double sideB, double angelBetween)
         {
-            return new(
-                sideA,
-                sideB,
-                Math.Sqrt(Math.Pow(sideA, 2) + Math.Pow(sideB, 2) - 2 * sideA * sideB * Math.Cos(angelBetween)));
+            double cos = Math.Cos(radian ? angelBetween : angelBetween * Math.PI / 180);
+            double sideC = Math.Sqrt(Math.Pow(sideA, 2) + Math.Pow(sideB, 2) - 2 * sideA * sideB * cos);
+
+            return new(sideA, sideB,sideC);
         }
 
         public override bool Equals(object? obj)
