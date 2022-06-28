@@ -33,7 +33,7 @@
             SideC = sideC;
         }
         private Triangle() { }
-        public static Triangle CreateWith2Side(double sideA, double sideB, double angelBetween)
+        public static Triangle CreateWith2Side(double sideA, double sideB, double angelBetween, bool radian = false)
         {
             double cos = Math.Cos(radian ? angelBetween : angelBetween * Math.PI / 180);
             double sideC = Math.Sqrt(Math.Pow(sideA, 2) + Math.Pow(sideB, 2) - 2 * sideA * sideB * cos);
