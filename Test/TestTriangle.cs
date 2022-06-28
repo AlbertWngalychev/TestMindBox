@@ -24,12 +24,5 @@ namespace Tests
             Triangle tr = new(3, 4, 5);
             Assert.True(tr.IsRectangular);
         }
-
-        public void Create2side1angle()
-        {
-            Triangle tr = Triangle.CreateWith2Side(3, 4, 90);
-            Triangle tr3side = new(3, 4, 5);
-            Assert.True(tr3side.Equals(tr));
-        }
     }
 }
