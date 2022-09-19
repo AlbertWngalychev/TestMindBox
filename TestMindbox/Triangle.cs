@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.Common;
+using TestMindbox.Interfaces;
 
 namespace TestMindbox
 {
